@@ -35,6 +35,7 @@
             this.UpdateCard = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.DataReceived = new System.Windows.Forms.ListBox();
+            this.StopServer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             // StartServer
             // 
-            this.StartServer.Location = new System.Drawing.Point(55, 190);
+            this.StartServer.Location = new System.Drawing.Point(55, 151);
             this.StartServer.Name = "StartServer";
             this.StartServer.Size = new System.Drawing.Size(183, 23);
             this.StartServer.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // UpdateUsers
             // 
-            this.UpdateUsers.Location = new System.Drawing.Point(55, 220);
+            this.UpdateUsers.Location = new System.Drawing.Point(56, 209);
             this.UpdateUsers.Name = "UpdateUsers";
             this.UpdateUsers.Size = new System.Drawing.Size(183, 23);
             this.UpdateUsers.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // UpdateCard
             // 
-            this.UpdateCard.Location = new System.Drawing.Point(55, 250);
+            this.UpdateCard.Location = new System.Drawing.Point(56, 238);
             this.UpdateCard.Name = "UpdateCard";
             this.UpdateCard.Size = new System.Drawing.Size(183, 23);
             this.UpdateCard.TabIndex = 3;
@@ -78,26 +79,38 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(55, 279);
+            this.Exit.Location = new System.Drawing.Point(56, 267);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(183, 23);
             this.Exit.TabIndex = 4;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // DataReceived
             // 
             this.DataReceived.FormattingEnabled = true;
             this.DataReceived.Location = new System.Drawing.Point(245, 13);
             this.DataReceived.Name = "DataReceived";
-            this.DataReceived.Size = new System.Drawing.Size(302, 290);
+            this.DataReceived.Size = new System.Drawing.Size(302, 277);
             this.DataReceived.TabIndex = 5;
+            // 
+            // StopServer
+            // 
+            this.StopServer.Location = new System.Drawing.Point(56, 180);
+            this.StopServer.Name = "StopServer";
+            this.StopServer.Size = new System.Drawing.Size(183, 23);
+            this.StopServer.TabIndex = 6;
+            this.StopServer.Text = "Stop the server";
+            this.StopServer.UseVisualStyleBackColor = true;
+            this.StopServer.Click += new System.EventHandler(this.StopServer_Click);
             // 
             // Guldkortet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 327);
+            this.ClientSize = new System.Drawing.Size(559, 305);
+            this.Controls.Add(this.StopServer);
             this.Controls.Add(this.DataReceived);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.UpdateCard);
@@ -120,6 +133,7 @@
         private System.Windows.Forms.Button UpdateCard;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.ListBox DataReceived;
+        private System.Windows.Forms.Button StopServer;
     }
 }
 

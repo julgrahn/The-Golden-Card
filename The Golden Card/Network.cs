@@ -11,9 +11,15 @@ namespace The_Golden_Card
         Int32 port = 12345;
         IPAddress localAddress = IPAddress.Parse("127.0.0.1");
 
-        public Network()
+        public void StartServer()
         {
             server = new TcpListener(localAddress, port);
+            server.Start();
+        }
+
+        public void StopServer()
+        {
+            server.Stop();
         }
 
     }
